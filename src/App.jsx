@@ -1,10 +1,11 @@
 import React from 'react'
 import "./app.scss"
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   return (
     <div>
-      <section>Hero</section>
+      <section><Navbar/></section>
       <section>peralax</section>
       <section>Services</section>
       <section>project1</section>
