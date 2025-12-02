@@ -1,0 +1,73 @@
+.Hero {
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+
+    .wrapperH {
+        max-width: 1366px;
+        height: 100%;
+        margin: auto;
+
+        .textConteiner {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+            h2 {
+                font-size: 30px;
+                color: rebeccapurple;
+                font-family: "Playwrite NO", cursive;
+                letter-spacing: 10px;
+            }
+
+            h1 {
+                font-size: 58px;
+
+                span {
+                    display: block;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                gap: 20px;
+
+                button {
+                    font-size: 12px;
+                    padding: 20px;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    background: transparent;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: 300;
+                }
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    .imageConteiner {
+        height: 100%;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .sliderImageConteiner {
+        position: absolute;
+        font-size: 50vh;
+        bottom: -120px;
+        white-space: nowrap;
+        color: #4444552d;
+        width: 50%;
+        font-weight: bold;
+    }
+}

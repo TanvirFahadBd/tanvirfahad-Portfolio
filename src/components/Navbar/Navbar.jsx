@@ -1,3 +1,4 @@
+import Hero from "../Hero/Hero";
 import Sidebar from "../sidebar/Sidebar";
 import "./Navbar.scss"
 import { motion } from "framer-motion";

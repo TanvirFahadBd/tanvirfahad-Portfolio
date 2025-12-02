@@ -37,10 +37,10 @@ const Link = () => {
   let items = ["Homepage", "services", "porthfolio", "contact", "About"]
   return (
     <motion.div className='link' variants={variants}>
-      {items.map((item, keyea) => (
+      {items.map((item, index) => (
         <motion.a 
           href={`#${item}`} 
-          key={keyea}
+          key={index}
           variants={itemvariants} 
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.05 }}
