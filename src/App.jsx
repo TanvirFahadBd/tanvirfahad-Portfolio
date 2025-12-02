@@ -5,14 +5,15 @@ import Navbar from './components/Navbar/Navbar'
 const App = () => {
   return (
     <div>
-      <section><Navbar/></section>
+      <section id='Homepage'><Navbar/></section>
       <section>peralax</section>
-      <section>Services</section>
-      <section>project1</section>
+      <section id='services'>Services</section>
+      <section id='porthfolio'>project1</section>
       <section>project2</section>
       <section>project3</section>
       <section>project4</section>
-      <section>contact</section>
+      <section id='contact'>contact</section>
+      <section id='About'>About</section>
     </div>
   )
 }

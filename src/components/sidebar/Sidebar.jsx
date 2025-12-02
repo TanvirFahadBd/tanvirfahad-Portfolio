@@ -5,26 +5,27 @@ import "./sidebar.scss"
 import ToggleButton from './Togglebuttons/ToggleButton'
 import Link from './Link/link'
 
+let variants = {
+  open: {
+    clipPath: "circle(1200px at 50px 50px )",
+    transition: {
+      type: "spring" 
+    }
+
+  },
+  closed: {
+    clipPath: "circle(30px at 50px 50px)",
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
 const Sidebar = () => {
   let [open, setOpen] = useState(false)
 
-  let variants = {
-    open: {
-      clipPath: "circle(1200px at 50px 50px )",
-      transition: {
-        type: "spring" 
-      }
-
-    },
-    closed: {
-      clipPath: "circle(30px at 50px 50px)",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
-    },
-  };
   return (
     <motion.div className="sidebar" animate={open ? "open" : "closed"}>
       <motion.div className="bg" variants={variants}>
