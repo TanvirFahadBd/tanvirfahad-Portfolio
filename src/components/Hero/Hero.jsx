@@ -1,4 +1,5 @@
 import { animate } from "framer-motion"
+
 import "./Hero.scss"
 import { motion } from "framer-motion";
 
@@ -57,8 +58,8 @@ const Hero = () => {
 
                     </motion.h1>
                     <motion.div className="buttons" variants={textVariants}>
-                        <button>See the letest Work</button>
-                        <button>Contact me</button>
+                        <button><a href="#porthfolio">See the letest Work</a></button>
+                        <button><a href="#contact"> contact me</a></button>
                     </motion.div>
 
                     <motion.img src="/scroll.png" alt="" variants={textVariants} animate="scrollButton" />
@@ -68,7 +69,7 @@ const Hero = () => {
                 Gamer Web Developer Grapihcs Designer
             </motion.div>
             <div className="imageConteiner">
-                <img src="../public/hero.png" alt="" />
+                <img src="/heroe.png" alt="" />
             </div>
         </div>
     )
