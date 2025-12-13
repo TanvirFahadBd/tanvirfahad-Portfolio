@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"; 
 import "./sidebar.scss"
 import ToggleButton from './Togglebuttons/ToggleButton'
-import Link from './Link/link'
+import Link from './Link/Link';
+
 
 let variants = {
   open: {
