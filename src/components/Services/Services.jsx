@@ -52,26 +52,26 @@ const Services = () => {
                     <button>Go</button>
                 </motion.div>
                 <motion.div className="boox" whileHover={{ background: "lightgray", color: "black" }}>
-                    <h2>Branding</h2>
-                    <p>Creating a unique image and identity for
-                        your brand that resonates with your
-                        target audience.
+                    <h2>Web Development</h2>
+                    <p>Building responsive and user-friendly websites
+                        that effectively represent your brand
+                        online.
                     </p>
                     <button>Go</button>
                 </motion.div>
                 <motion.div className="boox" whileHover={{ background: "lightgray", color: "black" }}>
-                    <h2>Branding</h2>
-                    <p>Creating a unique image and identity for
-                        your brand that resonates with your
-                        target audience.
+                    <h2>Brand Identity</h2>
+                    <p>Crafting a cohesive visual and verbal identity
+                        that reflects your brand's values
+                        and personality.
                     </p>
                     <button>Go</button>
                 </motion.div>
                 <motion.div className="boox" whileHover={{ background: "lightgray", color: "black" }}>
-                    <h2>Branding</h2>
-                    <p>Creating a unique image and identity for
-                        your brand that resonates with your
-                        target audience.
+                    <h2>Marketing</h2>
+                    <p>Developing and implementing effective marketing
+                        strategies to promote your brand
+                        and reach your target audience.
                     </p>
                     <button>Go</button>
                 </motion.div>
