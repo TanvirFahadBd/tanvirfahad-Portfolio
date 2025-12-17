@@ -10,6 +10,7 @@
         margin: auto;
         position: relative;
         z-index: 42;
+        padding: 0 20px;
 
         .textConteiner {
             height: 100%;
@@ -19,15 +20,32 @@
             justify-content: center;
             gap: 30px;
 
+            @media (max-width: 768px) {
+                width: 100%; // Takes full width on mobile
+                align-items: center;
+                text-align: center;
+            }
+
             h2 {
                 font-size: 30px;
-                color: rebeccapurple;
+                // Lightened the purple slightly so it's visible on dark background
+                color: #9d72ff; 
                 font-family: "Playwrite NO", cursive;
                 letter-spacing: 10px;
+
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                    letter-spacing: 5px;
+                }
             }
 
             h1 {
                 font-size: 58px;
+                color: white; // High visibility
+
+                @media (max-width: 768px) {
+                    font-size: 36px;
+                }
 
                 span {
                     display: block;
@@ -47,6 +65,19 @@
                     color: white;
                     cursor: pointer;
                     font-weight: 300;
+                    transition: all 0.3s ease;
+
+                    // --- HOVER FIX ---
+                    &:hover {
+                        background: #0c0c1d; // Dark blue/black hover
+                        border-color: #ff4c60; // Accent border color
+                        color: white; // Keeps text visible
+                    }
+                    
+                    &:last-child:hover {
+                        background: white;
+                        color: black;
+                    }
                 }
             }
 
@@ -61,12 +92,23 @@
         top: 0;
         right: 0;
         position: absolute;
+        z-index: 1; // Sits behind text wrapper
+
+        @media (max-width: 768px) {
+            opacity: 0.3; // Faded on mobile so text is readable
+            height: 50%;
+        }
 
         img {
             width: 1000px;
             height: 1000px;
-        }
+            object-fit: contain;
 
+            @media (max-width: 1366px) {
+                width: 700px;
+                
+            }
+        }
     }
 
     .sliderImageConteiner {
@@ -74,8 +116,11 @@
         font-size: 50vh;
         bottom: -120px;
         white-space: nowrap;
-        color: #4444552d;
-        width: 50%;
+        // Keep this low opacity so it doesn't fight with the H1
+        color: #ffffff09; 
+        width: 100%; // Allow it to span full width for the animation
         font-weight: bold;
+        z-index: 0;
+        pointer-events: none; // Doesn't block button clicks
     }
 }

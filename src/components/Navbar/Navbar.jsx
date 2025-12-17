@@ -13,10 +13,10 @@ const Navbar = () => {
                     <a href="/home">Tanver Fahat</a>
                 </motion.h1>
                 <div className="social">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/tanvir.fahad.601196"><i className="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.behance.net/tanvirfahad1"><i className="fa-brands fa-behance"></i></a>
+                    <a href="https://github.com/TanvirFahadBd"><i className="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/tanver-fahat-34b879327"><i className="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>

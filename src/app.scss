@@ -22,3 +22,14 @@ section {
     height: 100vh;
     scroll-snap-align: center;
 }
+
+.footi{
+    height: 60px;
+    background-color: #111132;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}

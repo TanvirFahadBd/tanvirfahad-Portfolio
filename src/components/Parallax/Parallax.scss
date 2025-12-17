@@ -1,40 +1,57 @@
 .Parallax {
-    height: 100%;
+    height: 100vh; // Ensure it fills the full screen height
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    // Using a dark base color so stars are always visible
+    background: linear-gradient(180deg, #0a0a12, #111132);
 
     h1 {
-        font-size: 100px;
+        font-size: clamp(40px, 12vw, 100px); // Shrinks perfectly on mobile
+        font-weight: 800;
+        text-align: center;
+        color: white;
+        position: relative;
+        z-index: 2; // Sits behind mountains but in front of stars/planets
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        padding: 0 20px;
+    }
+
+    // Common styles for all parallax layers
+    .mountens, .planets, .stars {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        // Mobile optimization: Adjust background position
+        @media (max-width: 768px) {
+            background-position: center bottom;
+            background-size: contain; // Prevents mountains from covering the whole screen
+        }
     }
 
     .mountens {
-        background: url(../../../public/mountains.png);
-        background-size: cover;
+        background-image: url("../../../public/mountains.png");
         background-position: bottom;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 3;
+        z-index: 3; // Front layer
     }
+
     .planets {
-        background: url(../../../public/planets.png);
-        background-size: cover;
+        background-image: url("../../../public/planets.png");
         background-position: bottom;
-        width: 100%;
-        height: 100%;
-        position: absolute;
         z-index: 2;
+        // Subtle glow effect
+        filter: brightness(0.8) drop-shadow(0 0 20px rgba(255, 165, 0, 0.2));
     }
+
     .stars {
-        background: url(../../../public/stars.png);
-        background-size: cover;
-        background-position: bottom;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
+        background-image: url("../../../public/stars.png");
+        background-position: center;
+        z-index: 1; // Back layer
     }
 }

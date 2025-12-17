@@ -1,16 +1,62 @@
 .navbar {
     height: 100px;
+    width: 100%;
+    // Ensure text is visible if you have a logo or title here
+    color: white; 
 }
 
 .wrapper {
     display: flex;
-    align-items:center ;
+    align-items: center;
     justify-content: space-between;
     height: 100%;
     max-width: 1366px;
     margin: auto;
+    padding: 0 20px; // Padding so content doesn't touch screen edges
+
+    @media (max-width: 768px) {
+        padding: 0 10px;
+        // Optional: reduce height on mobile if 100px feels too big
+        // height: 70px; 
+    }
+
+    span {
+        font-weight: bold;
+        font-size: 24px;
+        color: white; // High contrast
+    }
 }
-.social{
+
+.social {
     display: flex;
     gap: 20px;
+
+    @media (max-width: 480px) {
+        gap: 10px; // Tighter gap for very small phones
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        // --- HOVER FIX ---
+        &:hover {
+            background-color: black; // Becomes black on hover as requested
+            transform: scale(1.1); // Slight pop effect
+            
+            img {
+                filter: brightness(1.2); // Makes icons slightly brighter on hover
+            }
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+        }
+    }
 }

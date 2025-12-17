@@ -49,7 +49,7 @@ const Services = () => {
                         your brand that resonates with your
                         target audience.
                     </p>
-                    <button>Go</button>
+                    <button><a href="#contact">Go</a></button>
                 </motion.div>
                 <motion.div className="boox" whileHover={{ background: "lightgray", color: "black" }}>
                     <h2>Web Development</h2>
@@ -57,7 +57,7 @@ const Services = () => {
                         that effectively represent your brand
                         online.
                     </p>
-                    <button>Go</button>
+                    <button><a href="#contact">Go</a></button>
                 </motion.div>
                 <motion.div className="boox" whileHover={{ background: "lightgray", color: "black" }}>
                     <h2>Brand Identity</h2>
@@ -65,7 +65,7 @@ const Services = () => {
                         that reflects your brand's values
                         and personality.
                     </p>
-                    <button>Go</button>
+                    <button><a href="#contact">Go</a></button>
                 </motion.div>
                 <motion.div className="boox" whileHover={{ background: "lightgray", color: "black" }}>
                     <h2>Marketing</h2>
@@ -73,7 +73,7 @@ const Services = () => {
                         strategies to promote your brand
                         and reach your target audience.
                     </p>
-                    <button>Go</button>
+                    <button><a href="#contact">Go</a></button>
                 </motion.div>
             </motion.div>
         </motion.div>

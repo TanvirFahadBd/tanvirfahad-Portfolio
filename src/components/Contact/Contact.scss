@@ -1,65 +1,152 @@
 .Contact {
-    height: 100%;
+    height: auto; // Allows for scrolling on small screens
+    min-height: 100vh;
     max-width: 1366px;
     margin: auto;
     display: flex;
+    flex-direction: column; // Default for mobile
     align-items: center;
-    gap: 50px;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
 
+    // 1. TEXT SECTION
     .textConteiner {
-        flex: 1;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
+        text-align: center; // Center text on mobile
 
         h1 {
-            font-size: 100PX;
-            line-height: 80px;
+            font-size: clamp(40px, 10vw, 100px); 
+            line-height: 0.9;
+            font-weight: 800;
+            color: #6f69aa; // Deep black for maximum visibility
+            margin: 0;
         }
 
-        span {
-            font-weight: 300;
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            h2 {
+                font-size: 22px;
+                color: #fffdfd;
+                margin-bottom: 5px;
+            }
+
+            span {
+                font-weight: 500;
+                color: #ffffff; // Darker gray for readability
+                font-size: 18px;
+            }
         }
     }
 
+    // 2. FORM SECTION
     .formConteiner {
-        flex: 1;
+        width: 100%;
+        max-width: 500px; // Keeps form from getting too wide on desktop
         position: relative;
+        z-index: 1;
 
         .phonesvg {
             position: absolute;
-            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             stroke: orange;
+            stroke-width: 0.5;
+            opacity: 0.15;
             z-index: -1;
+            width: 120%;
+            height: 120%;
+            pointer-events: none; // Ensures it doesn't block clicks
         }
 
         form {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            background: white; // Solid background for clarity
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 
             input,
             textarea {
                 width: 100%;
-                padding: 20px;
-                border: 1px solid gray;
+                padding: 16px;
+                background-color: #f9f9f9; // Very light gray background
+                border: 2px solid #333; // Dark border for high visibility
                 border-radius: 8px;
                 font-size: 16px;
-                font-family: 'Arial', sans-serif;
-                resize: none;
+                font-weight: 500;
+                color: #000000; // Pure black text inside input
+                transition: all 0.2s ease;
                 outline: none;
+
+                &::placeholder {
+                    color: #666; // Darker placeholder
+                }
+
+                &:focus {
+                    border-color: orange;
+                    background-color: #fff;
+                    box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.2);
+                }
+            }
+
+            textarea {
+                min-height: 120px;
+                resize: vertical;
             }
 
             button {
-                height: 50px;
+                height: 55px;
                 border: none;
                 background: orange;
                 border-radius: 8px;
                 cursor: pointer;
                 font-size: 18px;
-                font-weight: bold;
+                font-weight: 800;
                 color: white;
+                transition: 0.3s;
+
+                &:hover {
+                    background: #e69500; // Slightly darker orange
+                    transform: scale(1.02);
+                }
             }
+        }
+    }
+
+    // --- RESPONSIVE BREAKPOINTS ---
+
+    // Tablet & Small Laptops (768px and up)
+    @media (min-width: 768px) {
+        flex-direction: row; // Side-by-side layout
+        padding: 60px;
+        gap: 60px;
+
+        .textConteiner {
+            text-align: left; // Align text to the left
+            flex: 1;
+        }
+
+        .formConteiner {
+            flex: 1;
+        }
+    }
+
+    // Large Desktops (1200px and up)
+    @media (min-width: 1200px) {
+        gap: 100px;
+        
+        .textConteiner h1 {
+            line-height: 80px;
         }
     }
 }
