@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="wrapper">
                 <motion.h1 initial={{ opacity: 0,scale:0.5}}
                     animate={{ opacity: 1 ,scale:1}} transition={{ duration: 0.5 }}>
-                    <a href="/home">Tanver Fahat</a>
+                    <a href="#">Tanver Fahat</a>
                 </motion.h1>
                 <div className="social">
                     <a href="https://www.facebook.com/tanvir.fahad.601196"><i className="fa-brands fa-facebook"></i></a>
