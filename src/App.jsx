@@ -14,7 +14,7 @@ import Footer from './components/footer/Footer'
 const App = () => {
   return (
     <div>
-      <Cousor />
+    
       <section id='Homepage'><Navbar />
         <Hero />
       </section>
@@ -37,6 +37,7 @@ const App = () => {
       <section id='contact'>
         <Contact />
       </section>
+        <Cousor />
       <div className='footi'>
 <Footer/>
       </div>
